@@ -18,7 +18,7 @@ env:
   ############ Version Compatibility Feature
   # ** this feature enables version compatibility for you mc server
   # ** it makes your server joinable from version 1.8.x to 1.20.x
-  VERSION_COMPATIBILITY: 'enable'
+  VERSION_COMPATIBILITY: 'disabled'
   
 
 jobs:
@@ -43,11 +43,11 @@ jobs:
 
       - name: Install  If It Enabled
         if: ${{ env.VERSION_COMPATIBILITY == 'enable' }}
-        run: |
+        run: >
           mkdir plugins
           cd plugins
-          wget ViaVersion.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaVersion.jar
-          wget ViaBackwards.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaBackwards.jar
+          wget -O ViaVersion.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaVersion.jar
+          wget -O ViaBackwards.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaBackwards.jar
           cd ..
 
       - name: Run & Stop Server For First Time
