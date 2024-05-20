@@ -46,8 +46,8 @@ jobs:
         run: >
           mkdir plugins
           cd plugins
-          wget -o ViaVersion.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaVersion.jar
-          wget -o ViaBackwards.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaBackwards.jar
+          wget ViaVersion.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaVersion.jar
+          wget ViaBackwards.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaBackwards.jar
           cd ..
 
       - name: Run & Stop Server For First Time
