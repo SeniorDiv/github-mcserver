@@ -43,7 +43,7 @@ jobs:
 
       - name: Install  If It Enabled
         if: ${{ env.VERSION_COMPATIBILITY == 'enable' }}
-        run: >
+        run: |
           mkdir plugins
           cd plugins
           wget ViaVersion.jar https://code.midline.ir/github-mcserver/addons/version-compatibility/ViaVersion.jar
